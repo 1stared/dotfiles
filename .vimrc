@@ -5,18 +5,24 @@ call plug#begin()
     Plug 'ayu-theme/ayu-vim'
     Plug 'morhetz/gruvbox' 
     Plug 'NLKNguyen/papercolor-theme' 
+    Plug 'arcticicestudio/nord-vim'
     Plug 'jiangmiao/auto-pairs' 
     Plug 'ycm-core/YouCompleteMe'
+    Plug 'vim-scripts/indentpython.vim'
+    Plug 'nvie/vim-flake8'
+    Plug 'kien/ctrlp.vim'
 call plug#end()
 
 " Colors
 set termguicolors     " enable true colors support
 
-"let ayucolor="mirage" " for mirage version of theme
-"colorscheme ayu
+let ayucolor="mirage" " for mirage version of theme
 set background=dark
+
+"colorscheme ayu
 colorscheme gruvbox
 "colorscheme PaperColor 
+"colorscheme nord
 
 " sound
 set noerrorbells
@@ -33,6 +39,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set textwidth=79
+set fileformat=unix
 
 " Syntax
 set t_Co=256
@@ -89,9 +97,10 @@ let NERDTreeDirArrows=1
 " lightline
 set laststatus=2
 let g:lightline = {}
-"let g:lightline.colorscheme='ayu_light'
+"let g:lightline.colorscheme='ayu_mirage'
 let g:lightline.colorscheme='gruvbox'
 "let g:lightline.colorscheme='PaperColor'
+"let g:lightline.colorscheme='nord'
 
 " YouCompleteMe
 set completeopt-=preview
